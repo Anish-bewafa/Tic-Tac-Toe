@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Hedvig+Letters+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+
+}
+
+nav {
+    background-color: rgb(60, 6, 6);
+    color: antiquewhite;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding: 10px 13px;
+    font-weight: bold;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+
+}
+
+nav ul {
+    list-style-type: none;
+    
+}
+nav ul li{
+    background-color: rgb(60, 6, 6);
+}
+
+.gameContainer{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid rgb(52, 52, 52);
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color:rgb(242, 204, 204);
+}
+/* .boxtext:hover{
+    background-color:rgb(242, 204, 204);
+} */
+
+.gameInfo{
+    padding: 0px 30px;
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 15px;
+}
+
+.imgbox img{
+    width: 0 ;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0px;
+}
+.bl-0{
+    border-left: 0px;
+}
+.bt-0{
+    border-top: 0px;
+}
+.bb-0{
+    border-bottom: 0px;
+}
+.info{
+    font-size: 23px;
+}
+
+#reset{
+    margin: 10px 15px;
+    padding: 4px 12px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    border: 2px solid rgb(122, 88, 67);
+    border-radius: 7px;
+    background-color: rgb(255, 199, 196);
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.line{
+    background-color: rgb(10, 229, 178);
+    height: 5px;
+    width: 0;
+    position: absolute;
+    /* transform: translate(-6.5vw, 14.9vw) rotate(90deg); */
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    
+}
+
+@media screen and (max-width: 700px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin: 25px;
+    }
+    .gameInfo h1{
+        font-size: 2.5rem;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, 25vw);
+        grid-template-columns: repeat(3, 25vw);
+    }
+    #reset{
+        padding: 10px;
+        font-size: 25px;
+    }
+    .info{
+        font-size: 35px;
+        padding: 0px 40px;
+    }
+}
